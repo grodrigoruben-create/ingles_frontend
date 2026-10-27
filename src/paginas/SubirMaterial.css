@@ -1,0 +1,89 @@
+.contenedorFormulario {
+  max-width: 520px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeaea;
+  box-sizing: border-box;
+}
+
+.grupo {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.grupo label {
+  display: block;
+  font-weight: 650;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.grupo input, 
+.grupo select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #dcdde1;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fafbfc;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+/* Efecto moderno al hacer clic o escribir en los campos */
+.grupo input:focus, 
+.grupo select:focus {
+  outline: none;
+  border-color: #0056b3;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.1);
+}
+
+.botonSubir {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 6px rgba(40, 167, 69, 0.2);
+}
+
+.botonSubir:hover {
+  background-color: #218838;
+}
+
+.botonSubir:active {
+  transform: scale(0.98); /* Pequeño efecto de presión al hacer clic */
+}
+
+.botonSubir:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.mensaje {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.mensaje--ok {
+  color: #1e6b34;
+  background: #e6f5ea;
+}
+
+.mensaje--error {
+  color: #b3261e;
+  background: #fdecea;
+}

@@ -1,0 +1,26 @@
+.tabla-contenedor {
+  max-width: 900px;
+  margin: 24px auto;
+  overflow-x: auto;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: left;
+  color: #333;
+}
+
+.tabla th,
+.tabla td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.tabla th {
+  background: #f4f6f8;
+  font-weight: 600;
+}

@@ -1,0 +1,54 @@
+/* src/pages/Home.css */
+.home-container {
+  text-align: center;
+  font-family: sans-serif;
+  margin-top: 40px;
+}
+
+.bloques-container {
+  display: flex;
+  flex-wrap: wrap; /* Los bloques bajan de línea cuando no caben */
+  gap: 20px;
+  justify-content: center; /* Centra el contenido */
+  margin-top: 30px;
+  padding: 0 20px; /* Opcional: un pequeño margen lateral para que no peguen con el borde de la ventana */
+}
+
+.bloque-link {
+  flex: 1 1 200px; /* Se reparten el ancho, pero no se hacen más angostos de 200px */
+  /* width: 250px; -> ELIMINADO para que puedan crecer o encogerse */
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 40px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bloque-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  background-color: #f4f6f8;
+  color: #0056b3;
+}
+
+.btn-salir {
+  margin-top: 40px;
+  padding: 10px 20px;
+  font: inherit;
+  font-weight: 600;
+  color: #b3261e;
+  background: transparent;
+  border: 1.5px solid #b3261e;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-salir:hover {
+  background: #b3261e;
+  color: #fff;
+}

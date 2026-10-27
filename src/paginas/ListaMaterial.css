@@ -1,0 +1,115 @@
+.gridMateriales {
+  display: grid;
+  /* auto-fit asegura que las tarjetas se expandan para llenar el espacio sobrante de la pantalla */
+  /* Aumenté a 320px para que las tarjetas sean más proporcionales en pantallas grandes */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+  width: 100%; /* Asegura que el contenedor tome todo el ancho disponible */
+  padding: 0 20px; /* Evita que las tarjetas toquen los bordes de la pantalla */
+  box-sizing: border-box; /* Previene que el padding rompa el ancho total */
+}
+
+.tarjeta {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  
+  /* NUEVO: Flexbox interno para estructura de la tarjeta */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Asegura que todas las tarjetas de una fila midan lo mismo */
+  
+  /* Efecto al pasar el ratón (como en tu otra vista) */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.tarjeta h3 {
+  margin: 0 0 12px 0;
+  color: #0056b3;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.etiquetaNivel {
+  /* align-self evita que la etiqueta se estire a lo ancho por el flexbox */
+  align-self: flex-start;
+  background: #e9ecef;
+  color: #495057;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Si tuvieras un párrafo de descripción, este estilo lo empujaría correctamente */
+.tarjeta p {
+  margin-bottom: 20px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.enlaceArchivo {
+  /* margin-top: auto es LA MAGIA que empuja el botón siempre hasta el fondo de la tarjeta */
+  margin-top: auto; 
+  align-self: flex-start; /* Evita que el botón ocupe todo el ancho si no lo deseas */
+  text-decoration: none;
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.enlaceArchivo:hover {
+  background-color: #003d82;
+}
+
+.sinMaterial {
+  text-align: center;
+  color: #777;
+  margin-top: 50px;
+  grid-column: 1 / -1; /* Mantiene el mensaje centrado a lo ancho de toda la pantalla */
+  font-size: 1.1rem;
+}
+.contenidoArchivo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.imagenMaterial {
+  width: 100%;
+  max-width: 250px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+
+.enlaceArchivo {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.enlaceArchivo:hover {
+  background-color: #1d4ed8;
+}
